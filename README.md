@@ -6,7 +6,7 @@
 ### ⚙️ **Project Details**
 - 👨🏻‍🎓 **Author**: BULAI Stefan-Eduard
 - 🏫 **University**: Academia de Studii Economice București | FABIZ English | 2019 - 2022
-- 💻 **Current Version:** 1.0.1
+- 💻 **Current Version:** 1.0.0
 
 ---
 
