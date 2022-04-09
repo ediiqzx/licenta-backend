@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_and_workspaces",
+  "info": {
+    "singularName": "user-and-workspace",
+    "pluralName": "user-and-workspaces",
+    "displayName": "User & Workspace",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_and_workspaces"
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::workspace.workspace",
+      "inversedBy": "user_and_workspaces"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "owner",
+        "admin",
+        "analyst",
+        "custom"
+      ],
+      "default": "analyst",
+      "required": true
+    },
+    "custom_role": {
+      "type": "json"
+    }
+  }
+}

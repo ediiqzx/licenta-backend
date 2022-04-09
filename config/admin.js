@@ -1,5 +1,16 @@
 module.exports = ({ env }) => ({
+  apiToken: {
+    salt: env('API_TOKEN_SALT', ''),
+  },
   auth: {
-    secret: env('ADMIN_JWT_SECRET', '5c3e283853c08bc10bdc6c9e18cb7df2'),
+    events: {
+      onConnectionSuccess(e) {
+        console.log(e.user, e.provider);
+      },
+      onConnectionError(e) {
+        console.error(e.error, e.provider);
+      },
+    },
+    secret: env('ADMIN_JWT_SECRET', ''),
   },
 });

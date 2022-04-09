@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_workspace_default_tables",
+  "info": {
+    "displayName": "Default Tables",
+    "icon": "table",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "default_tables_clients": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "default_tables_contracts": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "default_tables_invoices": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "default_tables_products": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "default_tables_projects": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "default_tables_employees": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workspaces",
+  "info": {
+    "singularName": "workspace",
+    "pluralName": "workspaces",
+    "displayName": "Workspace",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "My Workspace"
+    },
+    "default_tables": {
+      "displayName": "Default Tables",
+      "type": "component",
+      "repeatable": false,
+      "component": "workspace.default-tables",
+      "required": true
+    },
+    "user_and_workspaces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-and-workspace.user-and-workspace",
+      "mappedBy": "workspace"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "personal_workspace"
+    }
+  }
+}
