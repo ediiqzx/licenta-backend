@@ -18,3 +18,18 @@
     - Configured the Strapi Project
     - Tested the Sourcetree & GIT
     - Created first README
+
+- **[1.1.0]**
+    - Config for VueJS & ViteJS
+    - Implement Login + Register
+    - Implement a part of dashboard
+
+- **[1.2.0]**
+    - Update JWT expiry time to 1 hour
+    - Add "secondary" type for asButton
+    - Add "hideLabel" prop for asField
+    - Implement Account Settings popup
+    - Implement Workspace Settings page
+    - Implement Workspace Settings - Box 1
+    - Implement Workspace Settings - Box 2 (not done)
+    - Check for JWT exprity in requests with authorization
