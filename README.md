@@ -33,3 +33,8 @@
     - Implement Workspace Settings - Box 1
     - Implement Workspace Settings - Box 2 (not done)
     - Check for JWT exprity in requests with authorization
+
+- **[1.3.0]**
+    - Create "custom_roles" attribute for "Workspaces"
+    - Implement creation of a new role
+    - Switch to "logout()", "fetchUser()", "fetchPersonalWorkspace()", "fetchActiveWorkspace()" and "changeWorkspace(:id)"

@@ -40,6 +40,9 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "personal_workspace"
+    },
+    "custom_roles": {
+      "type": "json"
     }
   }
 }
