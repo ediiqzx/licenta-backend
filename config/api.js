@@ -4,4 +4,4 @@ module.exports = {
     maxLimit: null,
     withCount: true,
   },
-};
+}

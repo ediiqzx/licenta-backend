@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
 /**
  *  workspace controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require('@strapi/strapi').factories
 
 module.exports = createCoreController('api::workspace.workspace', ({ strapi }) =>  ({
     async createCustomRole(ctx){
@@ -50,5 +50,44 @@ module.exports = createCoreController('api::workspace.workspace', ({ strapi }) =
         console.dir(workspace, { colors: true, depth: null })
 
         return workspace
+    },
+    async deleteCustomRole(ctx){
+        // Preluare date necesaree
+        var requestBody = ctx.request.body
+        console.log("Request body: ", requestBody)
+        var workspace = await strapi.entityService.findOne('api::workspace.workspace', requestBody.workspaceID)
+        console.log("Workspace: ", workspace)
+
+        // Actualizare "custom_roles" JSON
+        var newCustomRoleValue = workspace.custom_roles
+        delete newCustomRoleValue[requestBody.roleName]
+        console.log("newCustomRoleValue: ", newCustomRoleValue)
+
+        // Actualizare workspace
+        workspace = await strapi.entityService.update('api::workspace.workspace', requestBody.workspaceID, {
+            data: {
+                "custom_roles": newCustomRoleValue
+            }
+        })
+        console.log("Final Workspace: ")
+        console.dir(workspace, { colors: true, depth: null })
+
+        // Actualizare useri din workspace cu rolul eliminat la rolul Analyst
+        const entries = await strapi.entityService.findMany('api::user-and-workspace.user-and-workspace', {
+            filters: {
+                workspace: requestBody.workspaceID,
+                custom_role: requestBody.roleName
+            }
+        })
+        for (const [key, value] of Object.entries(entries)){
+            await strapi.entityService.update('api::user-and-workspace.user-and-workspace', value.id, {
+                data: {
+                    role: 'analyst',
+                    custom_role: null
+                }
+            })
+        }
+
+        return workspace
     }
-}));
+}))

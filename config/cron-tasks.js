@@ -14,5 +14,5 @@ module.exports = {
             tz: 'Europe/Bucharest',
         },
     },
-};
+}
   

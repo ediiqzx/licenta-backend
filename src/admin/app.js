@@ -1,6 +1,6 @@
-import AuthLogo from './extensions/strapi_logo_login.png';
-import MenuLogo from './extensions/strapi_logo_app.png';
-import favicon from './extensions/strapi_favicon.png';
+import AuthLogo from './extensions/strapi_logo_login.png'
+import MenuLogo from './extensions/strapi_logo_app.png'
+import favicon from './extensions/strapi_favicon.png'
 
 export default {
   config: {
@@ -26,6 +26,6 @@ export default {
     tutorials: false
   },
   bootstrap(app) {
-    console.log(app);
+    console.log(app)
   },
-};
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pending_invitations",
+  "info": {
+    "singularName": "pending-invitation",
+    "pluralName": "pending-invitations",
+    "displayName": "Pending Invitation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": false
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

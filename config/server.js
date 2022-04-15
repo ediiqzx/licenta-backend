@@ -1,4 +1,4 @@
-const cronTasks = require("./cron-tasks");
+const cronTasks = require("./cron-tasks")
 
 module.exports = ({ env }) => ({
   host: env('HOST', ''),
@@ -11,4 +11,4 @@ module.exports = ({ env }) => ({
     enabled: true,
     tasks: cronTasks
   },
-});
+})

@@ -38,3 +38,12 @@
     - Create "custom_roles" attribute for "Workspaces"
     - Implement creation of a new role
     - Switch to "logout()", "fetchUser()", "fetchPersonalWorkspace()", "fetchActiveWorkspace()" and "changeWorkspace(:id)"
+
+- **[1.4.0]**
+    - Implement deletion of a role
+    - Implement kicking of a user
+    - Implement (not fully) inviting a user
+    - Configure SendGrid
+    - Create "Pending Invitation" collection
+    - Implement possiblity to fetch users of a workspace through a new API endpoint
+    - Update users with a deleted role to "Analysts"

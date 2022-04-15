@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = {
   /**
@@ -39,6 +39,6 @@ module.exports = {
         } })
         console.log("User_and_workspace: ", user_and_workspace)
       },
-    });
+    })
    }
-};
+}

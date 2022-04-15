@@ -11,4 +11,4 @@ module.exports = ({ env }) => ({
     },
     timezone: 'Europe/Bucharest',
   },
-});
+})

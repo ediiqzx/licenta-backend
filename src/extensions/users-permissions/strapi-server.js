@@ -1,7 +1,7 @@
 module.exports = (plugin) => {
     // plugin.controllers.user.find = (ctx) => {
-    //     console.log('test');
-    // };
+    //     console.log('test')
+    // }
     // plugin.services.user.fetchAuthenticatedUser = 
-    return plugin;
-};
+    return plugin
+}

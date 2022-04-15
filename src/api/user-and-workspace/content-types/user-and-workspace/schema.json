@@ -36,7 +36,7 @@
       "required": true
     },
     "custom_role": {
-      "type": "json"
+      "type": "string"
     }
   }
 }

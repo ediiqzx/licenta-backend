@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
 /**
  * user-and-workspace router.
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require('@strapi/strapi').factories
 
-module.exports = createCoreRouter('api::user-and-workspace.user-and-workspace');
+module.exports = createCoreRouter('api::user-and-workspace.user-and-workspace')

@@ -5,12 +5,12 @@ module.exports = ({ env }) => ({
   auth: {
     events: {
       onConnectionSuccess(e) {
-        console.log(e.user, e.provider);
+        console.log(e.user, e.provider)
       },
       onConnectionError(e) {
-        console.error(e.error, e.provider);
+        console.error(e.error, e.provider)
       },
     },
     secret: env('ADMIN_JWT_SECRET', ''),
   },
-});
+})
