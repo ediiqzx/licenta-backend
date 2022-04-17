@@ -8,7 +8,8 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": false,
+    "populateCreatorFields": true
   },
   "pluginOptions": {},
   "attributes": {
@@ -24,6 +25,11 @@
     },
     "role": {
       "type": "string"
+    },
+    "invited_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

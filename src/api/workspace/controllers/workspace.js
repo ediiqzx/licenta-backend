@@ -8,7 +8,7 @@ const { createCoreController } = require('@strapi/strapi').factories
 
 module.exports = createCoreController('api::workspace.workspace', ({ strapi }) =>  ({
     async createCustomRole(ctx){
-        // Preluare date necesaree
+        // Preluare date necesare
         var requestBody = ctx.request.body
         console.log("Request body: ", requestBody)
         var workspace = await strapi.entityService.findOne('api::workspace.workspace', requestBody.workspaceID)
@@ -40,7 +40,7 @@ module.exports = createCoreController('api::workspace.workspace', ({ strapi }) =
         }
         console.log("newCustomRoleValue: ", newCustomRoleValue)
 
-        // Actualizare workspacee
+        // Actualizare workspace
         workspace = await strapi.entityService.update('api::workspace.workspace', requestBody.workspaceID, {
             data: {
                 "custom_roles": newCustomRoleValue
@@ -52,7 +52,7 @@ module.exports = createCoreController('api::workspace.workspace', ({ strapi }) =
         return workspace
     },
     async deleteCustomRole(ctx){
-        // Preluare date necesaree
+        // Preluare date necesare
         var requestBody = ctx.request.body
         console.log("Request body: ", requestBody)
         var workspace = await strapi.entityService.findOne('api::workspace.workspace', requestBody.workspaceID)

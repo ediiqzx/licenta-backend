@@ -47,3 +47,11 @@
     - Create "Pending Invitation" collection
     - Implement possiblity to fetch users of a workspace through a new API endpoint
     - Update users with a deleted role to "Analysts"
+
+- **[1.5.0]**
+    - Add "minlength" property for "asField" component
+    - Create "register-from-invitation" view
+    - Implement revocation of an invitation
+    - Send invitation email
+    - Add "invited_by" field for "Pending Invitation" collection
+    - Implement "handleInvitation" controller for "Pending Invitation" collection

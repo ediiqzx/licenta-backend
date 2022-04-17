@@ -28,7 +28,7 @@
       "type": "enumeration",
       "enum": [
         "owner",
-        "admin",
+        "manager",
         "analyst",
         "custom"
       ],
