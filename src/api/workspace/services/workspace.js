@@ -27,7 +27,7 @@ module.exports = createCoreService('api::workspace.workspace', ({ strapi }) => (
         console.log("Tables to remove from custom roles: ", tables_to_remove_from_custom_roles)
 
         // Actualizare custom roles
-        if (tables_to_remove_from_custom_roles.length){
+        if (tables_to_remove_from_custom_roles.length && custom_roles){
             for (const [key, value] of Object.entries(custom_roles))
                 if(value.tables_access != "all")
                     tables_to_remove_from_custom_roles.forEach(e => value.tables_access[e] = 4)

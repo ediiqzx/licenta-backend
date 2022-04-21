@@ -55,3 +55,10 @@
     - Send invitation email
     - Add "invited_by" field for "Pending Invitation" collection
     - Implement "handleInvitation" controller for "Pending Invitation" collection
+
+- **[1.6.0]**
+    - Implement "changeWorkspace" method
+    - Implement "leaveWorkspace" method
+    - Implement changing of a user role
+    - Simplify some data updates using "forEach" and array of attributes
+    - Update some comments and logs to maintain consistency
