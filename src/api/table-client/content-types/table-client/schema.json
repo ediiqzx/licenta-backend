@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_clients",
+  "info": {
+    "singularName": "table-client",
+    "pluralName": "table-clients",
+    "displayName": "Table - Client",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_name": {
+      "type": "string",
+      "required": true
+    },
+    "client_trade_register_number": {
+      "type": "string",
+      "required": false
+    },
+    "client_address": {
+      "type": "string",
+      "required": true
+    },
+    "client_contact_person": {
+      "displayName": "company_contact_person",
+      "type": "component",
+      "repeatable": false,
+      "component": "tables.company-contact-person"
+    },
+    "client_iban": {
+      "type": "string"
+    },
+    "client_vat_payer": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "client_contracts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-contract.table-contract",
+      "mappedBy": "contract_client"
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    },
+    "client_cui": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

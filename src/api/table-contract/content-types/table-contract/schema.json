@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_contracts",
+  "info": {
+    "singularName": "table-contract",
+    "pluralName": "table-contracts",
+    "displayName": "Table - Contract",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contract_date": {
+      "type": "date",
+      "required": true
+    },
+    "contract_status": {
+      "type": "enumeration",
+      "enum": [
+        "Draft",
+        "Active",
+        "Inactive"
+      ],
+      "default": "Draft",
+      "required": true
+    },
+    "contract_client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table-client.table-client",
+      "inversedBy": "client_contracts"
+    },
+    "contract_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-project.table-project",
+      "mappedBy": "project_contract"
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    }
+  }
+}

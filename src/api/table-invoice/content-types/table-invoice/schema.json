@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_invoices",
+  "info": {
+    "singularName": "table-invoice",
+    "pluralName": "table-invoices",
+    "displayName": "Table - Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoice_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table-project.table-project",
+      "inversedBy": "project_invoices"
+    },
+    "invoice_total": {
+      "type": "decimal",
+      "default": 0
+    },
+    "invoice_issue_date": {
+      "type": "date",
+      "required": true
+    },
+    "invoice_due_date": {
+      "type": "date"
+    },
+    "invoice_paid": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "invoice_paid_date": {
+      "type": "date"
+    },
+    "invoice_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-invoice-item.table-invoice-item",
+      "mappedBy": "item_invoice"
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_projects",
+  "info": {
+    "singularName": "table-project",
+    "pluralName": "table-projects",
+    "displayName": "Table - Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_contract": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table-contract.table-contract",
+      "inversedBy": "contract_projects"
+    },
+    "project_invoices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-invoice.table-invoice",
+      "mappedBy": "invoice_project"
+    },
+    "project_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-project-task.table-project-task",
+      "mappedBy": "task_project"
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    }
+  }
+}

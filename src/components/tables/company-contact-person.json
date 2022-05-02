@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_tables_company_contact_people",
+  "info": {
+    "displayName": "Contact Person",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "person_name": {
+      "type": "string",
+      "required": true
+    },
+    "person_email": {
+      "type": "email",
+      "required": true
+    },
+    "person_phone": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

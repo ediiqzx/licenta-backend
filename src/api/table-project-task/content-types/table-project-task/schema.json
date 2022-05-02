@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_project_tasks",
+  "info": {
+    "singularName": "table-project-task",
+    "pluralName": "table-project-tasks",
+    "displayName": "Table - Project Task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "task_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table-project.table-project",
+      "inversedBy": "project_tasks"
+    },
+    "task_employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table-employee.table-employee",
+      "inversedBy": "employee_tasks"
+    },
+    "task_description": {
+      "type": "string",
+      "required": true
+    },
+    "task_deadline": {
+      "type": "date",
+      "required": false
+    },
+    "task_done": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    }
+  }
+}

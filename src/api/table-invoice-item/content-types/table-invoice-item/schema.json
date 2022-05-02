@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_invoice_items",
+  "info": {
+    "singularName": "table-invoice-item",
+    "pluralName": "table-invoice-items",
+    "displayName": "Table - Invoice Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item_invoice": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::table-invoice.table-invoice",
+      "inversedBy": "invoice_items"
+    },
+    "item_product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::table-product.table-product"
+    },
+    "item_quantity": {
+      "type": "decimal",
+      "required": true,
+      "default": 1
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    }
+  }
+}

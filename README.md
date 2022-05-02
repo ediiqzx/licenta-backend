@@ -62,3 +62,10 @@
     - Implement changing of a user role
     - Simplify some data updates using "forEach" and array of attributes
     - Update some comments and logs to maintain consistency
+
+- **[1.7.0]**
+    - Update date: 02.05.2022
+    - Implement "table" view in dashboard
+    - Implement "changeTableView" function
+    - Take into account user permissions
+    - Create platform tables

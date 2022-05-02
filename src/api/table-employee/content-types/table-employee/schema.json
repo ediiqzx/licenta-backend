@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_employees",
+  "info": {
+    "singularName": "table-employee",
+    "pluralName": "table-employees",
+    "displayName": "Table - Employee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employee_name": {
+      "type": "string",
+      "required": true
+    },
+    "employee_cnp": {
+      "type": "uid",
+      "required": true
+    },
+    "employee_profile_picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "employee_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::table-project-task.table-project-task",
+      "mappedBy": "task_employee"
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    }
+  }
+}

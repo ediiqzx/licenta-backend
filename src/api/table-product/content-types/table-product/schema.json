@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "table_products",
+  "info": {
+    "singularName": "table-product",
+    "pluralName": "table-products",
+    "displayName": "Table - Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "product_description": {
+      "type": "string",
+      "required": false
+    },
+    "product_quantity_unit": {
+      "type": "string",
+      "required": true,
+      "default": "hours"
+    },
+    "product_unit_value": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "workspace": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::workspace.workspace"
+    }
+  }
+}
