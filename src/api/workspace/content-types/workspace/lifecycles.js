@@ -8,10 +8,10 @@
 //         var tables_to_remove_from_custom_roles = []
 //         if (!default_tables.default_tables_clients) tables_to_remove_from_custom_roles.push('clients')
 //         if (!default_tables.default_tables_contracts) tables_to_remove_from_custom_roles.push('contracts')
-//         if (!default_tables.default_tables_invoices) tables_to_remove_from_custom_roles.push('invoices')
-//         if (!default_tables.default_tables_products) tables_to_remove_from_custom_roles.push('products')
 //         if (!default_tables.default_tables_projects) tables_to_remove_from_custom_roles.push('projects')
 //         if (!default_tables.default_tables_employees) tables_to_remove_from_custom_roles.push('employees')
+//         if (!default_tables.default_tables_invoices) tables_to_remove_from_custom_roles.push('invoices')
+//         if (!default_tables.default_tables_products) tables_to_remove_from_custom_roles.push('products')
 //         console.log("Tables to remove from custom roles: ", tables_to_remove_from_custom_roles)
         
 //         // Actualizare custom roles

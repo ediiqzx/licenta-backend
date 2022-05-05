@@ -34,6 +34,27 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::workspace.workspace"
+    },
+    "project_value": {
+      "type": "decimal",
+      "required": true
+    },
+    "project_status": {
+      "type": "enumeration",
+      "enum": [
+        "Planned",
+        "In-progress",
+        "Done"
+      ],
+      "default": "Planned",
+      "required": true
+    },
+    "project_name": {
+      "type": "string",
+      "required": true
+    },
+    "project_deadline": {
+      "type": "date"
     }
   }
 }

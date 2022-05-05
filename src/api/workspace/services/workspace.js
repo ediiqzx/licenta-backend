@@ -20,10 +20,10 @@ module.exports = createCoreService('api::workspace.workspace', ({ strapi }) => (
         var tables_to_remove_from_custom_roles = []
         if (!params.data.default_tables.default_tables_clients) tables_to_remove_from_custom_roles.push('clients')
         if (!params.data.default_tables.default_tables_contracts) tables_to_remove_from_custom_roles.push('contracts')
-        if (!params.data.default_tables.default_tables_invoices) tables_to_remove_from_custom_roles.push('invoices')
-        if (!params.data.default_tables.default_tables_products) tables_to_remove_from_custom_roles.push('products')
         if (!params.data.default_tables.default_tables_projects) tables_to_remove_from_custom_roles.push('projects')
         if (!params.data.default_tables.default_tables_employees) tables_to_remove_from_custom_roles.push('employees')
+        if (!params.data.default_tables.default_tables_invoices) tables_to_remove_from_custom_roles.push('invoices')
+        if (!params.data.default_tables.default_tables_products) tables_to_remove_from_custom_roles.push('products')
         console.log("Tables to remove from custom roles: ", tables_to_remove_from_custom_roles)
 
         // Actualizare custom roles

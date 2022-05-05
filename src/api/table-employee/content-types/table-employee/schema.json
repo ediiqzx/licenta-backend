@@ -20,14 +20,6 @@
       "type": "uid",
       "required": true
     },
-    "employee_profile_picture": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "employee_tasks": {
       "type": "relation",
       "relation": "oneToMany",
