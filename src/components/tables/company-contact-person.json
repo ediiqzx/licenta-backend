@@ -9,15 +9,15 @@
   "attributes": {
     "person_name": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "person_email": {
       "type": "email",
-      "required": true
+      "required": false
     },
     "person_phone": {
       "type": "string",
-      "required": true
+      "required": false
     }
   }
 }

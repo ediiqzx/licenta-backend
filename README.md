@@ -12,6 +12,10 @@
 
 ### 🗃 **Changelog**
 
+- **[1.9.0]**
+    - Implement view entry
+    - Create number & date type of asField
+
 - **[1.8.0]**
     - Relayout the breadcrumbs to allow buttons on the right side of screenHead
     - Load table structurs and table entries
