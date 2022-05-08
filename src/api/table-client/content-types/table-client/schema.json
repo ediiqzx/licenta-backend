@@ -18,7 +18,7 @@
     },
     "client_trade_register_number": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "client_address": {
       "type": "string",

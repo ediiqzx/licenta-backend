@@ -27,7 +27,8 @@
       "required": true
     },
     "invoice_due_date": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "invoice_paid": {
       "type": "boolean",

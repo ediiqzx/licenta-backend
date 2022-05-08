@@ -12,6 +12,12 @@
 
 ### 🗃 **Changelog**
 
+- **[2.0.0]**
+    - Make "client_trade_register_number" required
+    - Make "invoice_due_date" required
+    - Make "project_deadline" required
+    - Convert "employee_cnp" from UID to number
+
 - **[1.9.0]**
     - Implement view entry
     - Create number & date type of asField

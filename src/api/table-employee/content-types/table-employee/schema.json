@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "employee_cnp": {
-      "type": "uid",
-      "required": true
-    },
     "employee_tasks": {
       "type": "relation",
       "relation": "oneToMany",
@@ -30,6 +26,10 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::workspace.workspace"
+    },
+    "employee_cnp": {
+      "type": "biginteger",
+      "required": true
     }
   }
 }

@@ -54,7 +54,8 @@
       "required": true
     },
     "project_deadline": {
-      "type": "date"
+      "type": "date",
+      "required": true
     }
   }
 }
