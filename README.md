@@ -17,6 +17,10 @@
     - Make "invoice_due_date" required
     - Make "project_deadline" required
     - Convert "employee_cnp" from UID to number
+    - Move modal styling into App.vue
+    - Add "min" and "step" props to asField
+    - Implement delete entry
+    - Implement add new entry
 
 - **[1.9.0]**
     - Implement view entry
