@@ -52,6 +52,12 @@
     "client_cui": {
       "type": "biginteger",
       "required": true
+    },
+    "discussions": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "tables.comment"
     }
   }
 }

@@ -9,6 +9,11 @@ module.exports = {
             "method": "POST",
             "path": "/workspaces/deleteCustomRole/",
             "handler": "workspace.deleteCustomRole"
+        },
+        {
+            "method": "POST",
+            "path": "/workspaces/addComment/",
+            "handler": "workspace.addComment"
         }
     ]
 }

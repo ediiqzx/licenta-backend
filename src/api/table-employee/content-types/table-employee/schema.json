@@ -30,6 +30,12 @@
     "employee_cnp": {
       "type": "biginteger",
       "required": true
+    },
+    "discussions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tables.comment",
+      "required": true
     }
   }
 }

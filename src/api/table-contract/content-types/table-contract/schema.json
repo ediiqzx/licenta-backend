@@ -42,6 +42,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::workspace.workspace"
+    },
+    "discussions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tables.comment",
+      "required": true
     }
   }
 }

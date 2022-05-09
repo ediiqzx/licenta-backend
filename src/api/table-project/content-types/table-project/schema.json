@@ -56,6 +56,12 @@
     "project_deadline": {
       "type": "date",
       "required": true
+    },
+    "discussions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tables.comment",
+      "required": true
     }
   }
 }

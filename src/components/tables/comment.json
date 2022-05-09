@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_tables_comments",
+  "info": {
+    "displayName": "Comment",
+    "icon": "comments",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "comment_text": {
+      "type": "string",
+      "required": true
+    },
+    "comment_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "comment_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

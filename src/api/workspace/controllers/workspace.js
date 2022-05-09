@@ -89,5 +89,25 @@ module.exports = createCoreController('api::workspace.workspace', ({ strapi }) =
         }
 
         return workspace
+    },
+    async addComment(ctx){
+        // Preluare date necesare
+        var requestBody = ctx.request.body
+        console.log("Request body: ", requestBody)
+        var tableSingular = requestBody.entry_table.slice(0, -1)
+
+        const entryBefore = await strapi.entityService.findOne('api::table-' + tableSingular + '.table-' + tableSingular, requestBody.entry_id, { populate: '*' })
+        console.log("entryBefore: ", entryBefore)
+
+        var newDiscussions = [ ...entryBefore.discussions, requestBody.comment_object ]
+
+        const entryAfter = await strapi.entityService.update('api::table-' + tableSingular + '.table-' + tableSingular, requestBody.entry_id, {
+            data: {
+                "discussions": newDiscussions
+            }
+        })
+        console.log("entryAfter: ", entryAfter)
+
+        return entryAfter
     }
 }))
