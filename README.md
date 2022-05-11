@@ -12,6 +12,16 @@
 
 ### 🗃 **Changelog**
 
+- **[2.2.0]**
+    - Enable adding of invoice-items and project-tasks
+    
+
+- **[2.1.0]**
+    - Update workspace settings visibilities depending on the user role
+    - Update in entry screen what sections user see depending on his role
+    - Implement entry discussions
+    - Prefill field if creating entry from entry view
+
 - **[2.0.0]**
     - Make "client_trade_register_number" required
     - Make "invoice_due_date" required
