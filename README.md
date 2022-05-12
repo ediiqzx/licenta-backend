@@ -14,7 +14,7 @@
 
 - **[2.2.0]**
     - Enable adding of invoice-items and project-tasks
-    
+    - Delete related entries in a cascading way when one is deleted
 
 - **[2.1.0]**
     - Update workspace settings visibilities depending on the user role
