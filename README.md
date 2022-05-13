@@ -12,6 +12,13 @@
 
 ### 🗃 **Changelog**
 
+- **[2.4.0]**
+    - Implement edit fileds for entry
+
+- **[2.3.0]**
+    - Update invoice_total when table-invoice-items update
+    - Implement delete entry when it's in 3rd type of box
+
 - **[2.2.0]**
     - Enable adding of invoice-items and project-tasks
     - Delete related entries in a cascading way when one is deleted
