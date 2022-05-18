@@ -12,6 +12,16 @@
 
 ### 🗃 **Changelog**
 
+- **[2.5.0]**
+    - Auto increase "invoice_number" and "contract_number"
+    - Implement dashboard
+    - Add "disabled" property for asButton
+    - Add "max" property for asField
+    - Rename "products" to "services"
+    - Allow negative "item_quantity" to enable storno invoices
+    - 
+
+
 - **[2.4.0]**
     - Implement edit fileds for entry
 
