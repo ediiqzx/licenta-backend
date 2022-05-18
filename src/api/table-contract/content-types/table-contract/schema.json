@@ -48,6 +48,9 @@
       "repeatable": true,
       "component": "tables.comment",
       "required": true
+    },
+    "contract_number": {
+      "type": "integer"
     }
   }
 }

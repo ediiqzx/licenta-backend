@@ -109,5 +109,84 @@ module.exports = createCoreController('api::workspace.workspace', ({ strapi }) =
         console.log("entryAfter: ", entryAfter)
 
         return entryAfter
+    },
+    async dashboard(ctx){
+        // Declarare date
+        var returnData = {
+            stats: [0, 0, 0, 0],
+            newestMember: '',
+            tables: [0, 0, 0, 0, 0, 0]
+        }
+        const list = ['client', 'contract', 'project', 'employee', 'invoice', 'product']
+
+        // Preluare date necesare
+        var workspaceID = ctx.params.workspace
+
+        // Preluare statistici entry-uri
+        for (let index in list){
+            let name = list[index]
+
+            // Today
+            let count = await strapi.db.query('api::table-' + name + '.table-' + name).count({
+                where: {
+                    workspace: workspaceID,
+                    createdAt: { $gte: new Date().toISOString().split('T')[0] }
+                }
+            })
+
+            // Last 7 days
+            let date2 = new Date()
+            date2.setDate(date2.getDate() - 7)
+            let count2 = await strapi.db.query('api::table-' + name + '.table-' + name).count({
+                where: {
+                    workspace: workspaceID,
+                    createdAt: { $gte: date2.toISOString().split('T')[0] }
+                }
+            })
+
+            // Last 31 days
+            let date3 = new Date()
+            date3.setDate(date3.getDate() - 31)
+            let count3 = await strapi.db.query('api::table-' + name + '.table-' + name).count({
+                where: {
+                    workspace: workspaceID,
+                    createdAt: { $gte: date3.toISOString().split('T')[0] }
+                }
+            })
+
+
+            returnData.stats[0] += count
+            returnData.stats[1] += count2
+            returnData.stats[2] += count3
+        }
+
+        // Preluare statistici new members
+        let date4 = new Date()
+        date4.setDate(date4.getDate() - 31)
+        returnData.stats[3] += await strapi.db.query('api::user-and-workspace.user-and-workspace').count({
+            where: {
+                workspace: workspaceID,
+                createdAt: { $gte: date4.toISOString().split('T')[0] }
+            }
+        })
+
+        // Preluare newest member
+        let member = await strapi.entityService.findMany('api::user-and-workspace.user-and-workspace', {
+            filters: { workspace: workspaceID },
+            sort: { createdAt: 'desc' },
+            populate: 'user',
+            limit: 1,
+        })
+        returnData.newestMember = member[0].user.display_name
+
+        // Preluare total entries
+        for (let index in list){
+            let name = list[index]
+            let count = await strapi.db.query('api::table-' + name + '.table-' + name).count({ where: { workspace: workspaceID } })
+            returnData.tables[index] = count
+        }
+
+        console.log(returnData)
+        return returnData
     }
 }))

@@ -14,6 +14,11 @@ module.exports = {
             "method": "POST",
             "path": "/workspaces/addComment/",
             "handler": "workspace.addComment"
+        },
+        {
+            "method": "GET",
+            "path": "/workspaces/dashboard/:workspace",
+            "handler": "workspace.dashboard"
         }
     ]
 }

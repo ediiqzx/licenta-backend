@@ -54,6 +54,9 @@
       "repeatable": true,
       "component": "tables.comment",
       "required": true
+    },
+    "invoice_number": {
+      "type": "integer"
     }
   }
 }
