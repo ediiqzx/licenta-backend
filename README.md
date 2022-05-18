@@ -19,8 +19,6 @@
     - Add "max" property for asField
     - Rename "products" to "services"
     - Allow negative "item_quantity" to enable storno invoices
-    - 
-
 
 - **[2.4.0]**
     - Implement edit fileds for entry
