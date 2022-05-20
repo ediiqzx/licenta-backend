@@ -37,7 +37,9 @@
     },
     "project_value": {
       "type": "decimal",
-      "required": true
+      "required": true,
+      "min": 0,
+      "max": 999999999
     },
     "project_status": {
       "type": "enumeration",
