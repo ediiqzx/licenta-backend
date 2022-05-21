@@ -10,10 +10,10 @@
 
 ---
 ### ⚙️ **Technologies Used**
-- 1️⃣ **Front-End framework:**: Vue.js [Access official website](https://vuejs.org/)
-- 1️⃣ **Front-End bundler:**: Vite [Access official website](https://vitejs.dev/)
-- 👨🏻‍🎓 **Back-End headless CMS:**: Strapi [Access official website](https://strapi.io/)
-- 👨🏻‍🎓 **Back-End runtime language:**: NodeJS [Access official website](https://nodejs.org/en/)
+- 1️⃣ **Front-End framework:**: Vue.js [[Access official website](https://vuejs.org/)]
+- 1️⃣ **Front-End bundler:**: Vite [[Access official website](https://vitejs.dev/)]
+- 👨🏻‍🎓 **Back-End headless CMS:**: Strapi [[Access official website](https://strapi.io/)]
+- 👨🏻‍🎓 **Back-End runtime language:**: NodeJS [[Access official website](https://nodejs.org/en/)]
 
 ---
 
