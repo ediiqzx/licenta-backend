@@ -6,10 +6,10 @@
 ### ⚙️ **Project Details**
 - 👨🏻‍🎓 **Author**: BULAI Stefan-Eduard
 - 🏫 **University**: Academia de Studii Economice București | FABIZ English | 2019 - 2022
-- 💻 **Current Version:** 2.6.0
+- 🧩 **Current Version:** 2.6.0
 
 ---
-### ⚙️ **Technologies Used**
+### 💻 **Technologies Used**
 - 1️⃣ **Front-End framework:**: Vue.js [[Access official website](https://vuejs.org/)]
 - 2️⃣ **Front-End bundler:**: Vite [[Access official website](https://vitejs.dev/)]
 - 3️⃣ **Back-End headless CMS:**: Strapi [[Access official website](https://strapi.io/)]
