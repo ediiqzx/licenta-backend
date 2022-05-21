@@ -2,6 +2,8 @@
 
 **Designing a database system for managing a company and maximizing its efficiency**
 
+Access [here](https://github.com/ediiqzx/licenta-frontend) the front-end repository where you can find the setup guide.
+
 ---
 ### ⚙️ **Project Details**
 - 👨🏻‍🎓 **Author**: BULAI Stefan-Eduard
