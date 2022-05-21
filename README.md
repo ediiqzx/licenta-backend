@@ -6,11 +6,22 @@
 ### ⚙️ **Project Details**
 - 👨🏻‍🎓 **Author**: BULAI Stefan-Eduard
 - 🏫 **University**: Academia de Studii Economice București | FABIZ English | 2019 - 2022
-- 💻 **Current Version:** 1.0.0
+- 💻 **Current Version:** 2.6.0
+
+---
+### ⚙️ **Technologies Used**
+- 1️⃣ **Front-End framework:**: Vue.js [Access official website](https://vuejs.org/)
+- 1️⃣ **Front-End bundler:**: Vite [Access official website](https://vitejs.dev/)
+- 👨🏻‍🎓 **Back-End headless CMS:**: Strapi [Access official website](https://strapi.io/)
+- 👨🏻‍🎓 **Back-End runtime language:**: NodeJS [Access official website](https://nodejs.org/en/)
 
 ---
 
 ### 🗃 **Changelog**
+
+- **[2.6.0]**
+    - Update READEMEs
+    - Present the project initialization and setup process
 
 - **[2.5.0]**
     - Auto increase "invoice_number" and "contract_number"
