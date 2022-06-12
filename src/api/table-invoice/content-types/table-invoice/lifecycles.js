@@ -27,6 +27,7 @@ module.exports = {
             limit: 1,
         });
 
-        event.params.data.invoice_number = lastEntry[0].invoice_number + 1
+        if (lastEntry.length) event.params.data.invoice_number = lastEntry[0].invoice_number + 1
+        else event.params.data.invoice_number = 1
     },
 }

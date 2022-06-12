@@ -21,6 +21,10 @@
 
 ### 🗃 **Changelog**
 
+- **[2.7.0]**
+  - Update max of asField number from 9999999999 to 9999999999999
+  - Before creating invoice/contract check if number should be "1" (first contract or first invoice)
+
 - **[2.6.0]**
     - Update READEMEs
     - Present the project initialization and setup process

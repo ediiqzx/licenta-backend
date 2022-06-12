@@ -18,7 +18,7 @@ module.exports = {
             console.log("Deleted 'table-project' with ID ", item.id)
         }
     },
-    async beforeCreate(event) {
+    async beforeCreate(event) {        
         const { data } = event.params;
         
         let lastEntry = await strapi.entityService.findMany('api::table-contract.table-contract', {
@@ -27,6 +27,7 @@ module.exports = {
             limit: 1,
         });
 
-        event.params.data.contract_number = lastEntry[0].contract_number + 1
+        if (lastEntry.length) event.params.data.contract_number = lastEntry[0].contract_number + 1
+        else event.params.data.contract_number = 1
     },
 }
